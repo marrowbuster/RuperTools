@@ -1,0 +1,4 @@
+name: RuperTools
+version: '0.0.1-alpha'
+main: com.marrowbuster.ruperTools.RuperTools
+api-version: '1.21'
