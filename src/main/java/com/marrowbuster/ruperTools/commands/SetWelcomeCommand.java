@@ -4,7 +4,6 @@ import com.marrowbuster.ruperTools.configs.WelcomeConfig;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 public class SetWelcomeCommand implements CommandExecutor {
