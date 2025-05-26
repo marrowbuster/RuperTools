@@ -2,3 +2,8 @@ name: RuperTools
 version: '0.0.1-alpha'
 main: com.marrowbuster.ruperTools.RuperTools
 api-version: '1.21'
+commands:
+  welcome:
+    description: sends a customised welcome command
+  setwelcome:
+    description: sets the custom welcome command
