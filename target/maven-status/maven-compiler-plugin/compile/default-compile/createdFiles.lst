@@ -1,0 +1,5 @@
+com\marrowbuster\ruperTools\commands\SetWelcomeCommand.class
+com\marrowbuster\ruperTools\listeners\CustomisableListener.class
+com\marrowbuster\ruperTools\RuperTools.class
+com\marrowbuster\ruperTools\commands\WelcomeCommand.class
+com\marrowbuster\ruperTools\configs\WelcomeConfig.class

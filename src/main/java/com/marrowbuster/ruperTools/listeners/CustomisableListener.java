@@ -1,26 +1,25 @@
 package com.marrowbuster.ruperTools.listeners;
 
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import com.marrowbuster.ruperTools.configs.WelcomeConfig;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 public class CustomisableListener implements Listener {
+    private final WelcomeConfig wcfg;
+    private final JavaPlugin jpl;
+
+    public CustomisableListener(@NotNull JavaPlugin jpl) {
+        this.jpl = jpl;
+        this.wcfg = new WelcomeConfig(jpl);
+    }
+
     public void onPlayerJoin(PlayerJoinEvent e) {
-        // want to load this from a config...
-        e.getPlayer().sendMessage(Component.text(""));
+        e.getPlayer().sendMessage(wcfg.getWelcome());
     }
 
-    public void setJoinMessage(@NotNull CommandSender cs, @NotNull String s) {
-        if (!(cs instanceof Player)) {
-            cs.sendMessage(Component.text("Bots can't yet get their own greeting messages.").color(NamedTextColor.RED));
-        }
-    }
-
-    public void getListenerConfig() {
-
+    public JavaPlugin getJpl() {
+        return jpl;
     }
 }
